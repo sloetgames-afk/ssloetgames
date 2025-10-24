@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Verificación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Solicitud de Verificación</h1>
+  <p>Envíanos una solicitud de verificación en nuestro juego como creador de contenido</p>
+</header>
+
+<main>
+  <div class="privacy-section">
+    <div class="section-title">Política y Privacidad</div>
+    <div class="section-subtitle">
+      Todos tus datos no serán compartidos con terceros y serán utilizados únicamente para procesar tu solicitud.
+    </div>
+  </div>
+
+  <form id="supportForm" action="https://formsubmit.co/sloetgames@gmail.com" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_subject" value="Nueva solicitud de verificación">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label for="name">Nombre</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="username">Usuario del juego</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="URL">URL de tu perfil</label>
+    <input type="url" id="URL" name="URL" required>
+
+    <label for="description">Descripción</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <label for="image">Imagen de tu perfil (opcional)</label>
+    <input type="file" id="image" name="image" accept="image/*">
+
+    <div class="privacy-container">
+      <input type="checkbox" id="privacyCheck">
+      <label for="privacyCheck">Acepto la política y privacidad</label>
+    </div>
+
+    <button type="submit" id="submitBtn" disabled>Enviar</button>
+  </form>
+
+  <div class="support-emails">
+    <p>Nuestras Redes:</p>
+    <span>TikTok</span>
+    <span>YouTube</span>
+    <span>Instagram</span>
+    <span>Discord</span>
+  </div>
+</main>
+
+<div class="copyright">
+  ©2025 - Sloet Games. Todos los derechos reservados.
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
