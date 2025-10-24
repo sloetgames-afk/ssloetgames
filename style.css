@@ -91,7 +91,8 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 textarea,
-input[type="file"] {
+input[type="file"],
+select {
   width: 100%;
   border-radius: 6px;
   padding: 7px 9px;
@@ -103,16 +104,17 @@ input[type="file"] {
   display: block;
 }
 
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="url"]:hover,
+input:hover,
 textarea:hover,
+select:hover,
 input[type="file"]:hover {
   border-color: #6de2ff;
   box-shadow: 0 0 5px #6de2ff40;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus,
+select:focus {
   border-color: #6de2ff;
   box-shadow: 0 0 5px #6de2ff50;
   outline: none;
@@ -123,6 +125,11 @@ textarea {
   resize: vertical;
 }
 
+select {
+  color-scheme: dark;
+}
+
+/* PRIVACIDAD */
 .privacy-container {
   width: 100%;
   margin: 8px 0 14px 0;
@@ -150,14 +157,12 @@ button {
   border: none;
   color: white;
   width: 100%;
-  max-width: 100%;
   padding: 8px 0;
   font-size: 12px;
   border-radius: 6px;
   cursor: pointer;
   box-shadow: 0 0 10px #4d9eff80;
   transition: all 0.3s ease;
-  display: block;
   margin: 8px 0 0 0;
 }
 
@@ -181,9 +186,6 @@ button:hover:enabled {
   text-align: center;
   padding: 8px 0;
   border-top: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-  bottom: 0;
-  left: 0;
 }
 
 /* RESPONSIVE */
@@ -197,16 +199,12 @@ button:hover:enabled {
     font-size: 23px;
   }
 
-  label, input, textarea, button, .section-title, .section-subtitle {
+  label, input, textarea, button, select, .section-title, .section-subtitle {
     font-size: 11.5px;
   }
 
   .privacy-section {
     width: 100%;
     padding: 7px;
-  }
-
-  button {
-    padding: 8px 0;
   }
 }
