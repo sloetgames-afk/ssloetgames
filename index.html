@@ -11,7 +11,7 @@
 
 <header>
   <h1>Solicitud de Verificación</h1>
-  <p>Envíanos una solicitud de verificación en nuestro juego como creador de contenido</p>
+  <p>Envíanos una solicitud de verificación en Real Drive Multiplayer como creador de contenido.</p>
 </header>
 
 <main>
@@ -23,7 +23,7 @@
   </div>
 
   <form id="supportForm" action="https://formsubmit.co/realdrivemultiplayer@gmail.com" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_subject" value="Nueva solicitud de verificación">
+    <input type="hidden" name="_subject" value="Nueva solicitud de verificación en RDM">
     <input type="hidden" name="_captcha" value="false">
 
     <label for="name">Nombre</label>
@@ -38,8 +38,19 @@
     <label for="URL">URL de tu perfil</label>
     <input type="url" id="URL" name="URL" required>
 
+    <!-- NUEVA SECCIÓN DE CATEGORÍA -->
+    <label for="category">Categoría de Verificación</label>
+    <select id="category" name="category" required>
+      <option value="" disabled selected>Selecciona una categoría</option>
+      <option value="YouTuber">YouTuber</option>
+      <option value="Streamer">Streamer (Twitch / Kick / etc.)</option>
+      <option value="TikToker">TikToker</option>
+      <option value="Influencer">Influencer / Instagram</option>
+      <option value="Otro">Otro</option>
+    </select>
+
     <label for="description">Descripción</label>
-    <textarea id="description" name="description" required></textarea>
+    <textarea id="description" name="description" placeholder="Cuéntanos por qué deseas ser verificado..." required></textarea>
 
     <label for="image">Imagen de tu perfil (opcional)</label>
     <input type="file" id="image" name="image" accept="image/*">
@@ -49,7 +60,7 @@
       <label for="privacyCheck">Acepto la política y privacidad</label>
     </div>
 
-    <button type="submit" id="submitBtn" disabled>Enviar</button>
+    <button type="submit" id="submitBtn" disabled>Enviar solicitud</button>
   </form>
 </main>
 
@@ -60,3 +71,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
